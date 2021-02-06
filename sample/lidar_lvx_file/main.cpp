@@ -35,7 +35,7 @@ std::condition_variable lidar_arrive_condition;
 std::condition_variable extrinsic_condition;
 std::condition_variable point_pack_condition;
 std::mutex mtx;
-int lvx_file_save_time = 10;
+int lvx_file_save_time = 60;
 bool is_finish_extrinsic_parameter = false;
 bool is_read_extrinsic_from_xml = false;
 uint8_t connected_lidar_count = 0;
@@ -358,37 +358,41 @@ int main(int argc, const char *argv[]) {
     return -1;
   }
 
-  WaitForExtrinsicParameter();
+  WaitForExtrinsicParameter(); 
 
-  printf("Start initialize lvx file.\n");
-  if (!lvx_file_handler.InitLvxFile()) {
-    Uninit();
-    return -1;
-  }
-
-  lvx_file_handler.InitLvxFileHeader();
 
   int i = 0;
-  steady_clock::time_point last_time = steady_clock::now();
-  for (i = 0; i < lvx_file_save_time * FRAME_RATE; ++i) {
-    std::list<LvxBasePackDetail> point_packet_list_temp;
-    {
-      std::unique_lock<std::mutex> lock(mtx);
-      point_pack_condition.wait_for(lock, milliseconds(kDefaultFrameDurationTime) - (steady_clock::now() - last_time));
-      last_time = steady_clock::now();
-      point_packet_list_temp.swap(point_packet_list);
-    }
-    if(point_packet_list_temp.empty()) {
-      printf("Point cloud packet is empty.\n");
-      break;
-    }
+  for (int j = 0; j < 100; j++)
+  {
+      printf("Start initialize lvx file.\n");
+      if (!lvx_file_handler.InitLvxFile()) {
+          Uninit();
+          return -1;
+      }
 
-    printf("Finish save %d frame to lvx file.\n", i);
-    lvx_file_handler.SaveFrameToLvxFile(point_packet_list_temp);
+      lvx_file_handler.InitLvxFileHeader();
+
+     
+      steady_clock::time_point last_time = steady_clock::now();
+      for (i = 0; i < lvx_file_save_time * FRAME_RATE; ++i) {
+          std::list<LvxBasePackDetail> point_packet_list_temp;
+          {
+              std::unique_lock<std::mutex> lock(mtx);
+              point_pack_condition.wait_for(lock, milliseconds(kDefaultFrameDurationTime) - (steady_clock::now() - last_time));
+              last_time = steady_clock::now();
+              point_packet_list_temp.swap(point_packet_list);
+          }
+          if (point_packet_list_temp.empty()) {
+              printf("Point cloud packet is empty.\n");
+              break;
+          }
+
+          printf("Finish save %d frame to lvx file.\n", i);
+          lvx_file_handler.SaveFrameToLvxFile(point_packet_list_temp);
+      }
+
+      lvx_file_handler.CloseLvxFile();
   }
-
-  lvx_file_handler.CloseLvxFile();
-
   for (i = 0; i < kMaxLidarCount; ++i) {
     if (devices[i].device_state == kDeviceStateSampling) {
 /** Stop the sampling of Livox LiDAR. */

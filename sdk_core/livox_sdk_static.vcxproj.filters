@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Work\Livox-SDK-master\sdk_core\src\third_party\FastCRC\FastCRCsw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Work\Livox-SDK-master\sdk_core\src\base\io_loop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Work\Livox-SDK-master\sdk_core\src\base\thread_base.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Work\Livox-SDK-master\sdk_core\src\base\io_thread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Work\Livox-SDK-master\sdk_core\src\base\network\win\network_util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Work\Livox-SDK-master\sdk_core\src\base\logging.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Work\Livox-SDK-master\sdk_core\src\livox_sdk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Work\Livox-SDK-master\sdk_core\src\device_discovery.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Work\Livox-SDK-master\sdk_core\src\device_manager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Work\Livox-SDK-master\sdk_core\src\comm\comm_port.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Work\Livox-SDK-master\sdk_core\src\comm\sdk_protocol.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Work\Livox-SDK-master\sdk_core\src\data_handler\data_handler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Work\Livox-SDK-master\sdk_core\src\data_handler\hub_data_handler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Work\Livox-SDK-master\sdk_core\src\data_handler\lidar_data_handler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Work\Livox-SDK-master\sdk_core\src\command_handler\command_handler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Work\Livox-SDK-master\sdk_core\src\command_handler\command_channel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Work\Livox-SDK-master\sdk_core\src\command_handler\hub_command_handler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Work\Livox-SDK-master\sdk_core\src\command_handler\lidar_command_handler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Work\Livox-SDK-master\sdk_core\src\command_handler\command_impl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Work\Livox-SDK-master\sdk_core\src\base\multiple_io\multiple_io_base.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Work\Livox-SDK-master\sdk_core\src\base\multiple_io\multiple_io_epoll.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Work\Livox-SDK-master\sdk_core\src\base\multiple_io\multiple_io_poll.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Work\Livox-SDK-master\sdk_core\src\base\multiple_io\multiple_io_select.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Work\Livox-SDK-master\sdk_core\src\base\multiple_io\multiple_io_kqueue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Work\Livox-SDK-master\sdk_core\src\base\wake_up\win\wake_up_pipe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\Work\Livox-SDK-master\sdk_core\src\third_party\FastCRC\FastCRC_tables.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Work\Livox-SDK-master\sdk_core\src\base\io_loop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Work\Livox-SDK-master\sdk_core\src\base\thread_base.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Work\Livox-SDK-master\sdk_core\src\base\io_thread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Work\Livox-SDK-master\sdk_core\src\base\network\network_util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Work\Livox-SDK-master\sdk_core\src\base\logging.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Work\Livox-SDK-master\sdk_core\src\base\noncopyable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Work\Livox-SDK-master\sdk_core\src\device_discovery.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Work\Livox-SDK-master\sdk_core\src\device_manager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Work\Livox-SDK-master\sdk_core\src\comm\sdk_protocol.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Work\Livox-SDK-master\sdk_core\src\data_handler\data_handler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Work\Livox-SDK-master\sdk_core\src\data_handler\hub_data_handler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Work\Livox-SDK-master\sdk_core\src\data_handler\lidar_data_handler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Work\Livox-SDK-master\sdk_core\src\command_handler\command_handler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Work\Livox-SDK-master\sdk_core\src\command_handler\command_channel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Work\Livox-SDK-master\sdk_core\src\command_handler\hub_command_handler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Work\Livox-SDK-master\sdk_core\src\command_handler\lidar_command_handler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Work\Livox-SDK-master\sdk_core\src\command_handler\command_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Work\Livox-SDK-master\sdk_core\src\base\multiple_io\multiple_io_base.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Work\Livox-SDK-master\sdk_core\src\base\multiple_io\multiple_io_factory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Work\Livox-SDK-master\sdk_core\src\base\multiple_io\multiple_io_epoll.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Work\Livox-SDK-master\sdk_core\src\base\multiple_io\multiple_io_poll.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Work\Livox-SDK-master\sdk_core\src\base\multiple_io\multiple_io_select.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Work\Livox-SDK-master\sdk_core\src\base\multiple_io\multiple_io_kqueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Work\Livox-SDK-master\sdk_core\src\base\wake_up\wake_up_pipe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Work\Livox-SDK-master\sdk_core\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{37A5F962-5741-3BF5-8207-63AC5F25DEA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{BE3306B0-76C8-30A5-BF77-EAF5E62494EF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

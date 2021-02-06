@@ -42,6 +42,10 @@ LvxFileHandle::LvxFileHandle() : cur_frame_index_(0), cur_offset_(0), frame_dura
 }
 
 bool LvxFileHandle::InitLvxFile() {
+
+     cur_frame_index_ = 0;
+     cur_offset_ = 0;
+
   time_t curtime = time(nullptr);
   char filename[30] = { 0 };
 
