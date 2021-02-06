@@ -7,6 +7,9 @@ build/*.cmake
 build/CMakeFiles
 build/sdk_core
 build/sample
+Debug
+Release
+CMakeFiles
 
 #whitelist
 !build/notes.txt
@@ -14,3 +17,7 @@ build/sample
 
 /.vs
 /CMakeFiles
+/CMakeCache.txt
+/lvx_data/*.lvx
+/lvx_data/*.7z
+/lvx_data/*.zip
