@@ -53,12 +53,15 @@ END_MESSAGE_MAP()
 CLidareRecorderDlg::CLidareRecorderDlg(CWnd* pParent /*=nullptr*/)
 	: CDialogEx(IDD_LIDARE_RECORDER_DIALOG, pParent)
 {
+	m_isRecording = false;
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
 
 void CLidareRecorderDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
+	DDX_Control(pDX, IDC_BUTTON_START_RECORD, m_btnStartRecord);
+	DDX_Control(pDX, IDC_BUTTON_STOP_RECORD, m_btnStopRecord);
 }
 
 BEGIN_MESSAGE_MAP(CLidareRecorderDlg, CDialogEx)
@@ -67,6 +70,7 @@ BEGIN_MESSAGE_MAP(CLidareRecorderDlg, CDialogEx)
 	ON_WM_QUERYDRAGICON()
 	ON_BN_CLICKED(IDC_BUTTON_START_RECORD, &CLidareRecorderDlg::OnBnClickedButtonStartRecord)
 	ON_BN_CLICKED(IDC_BUTTON_STOP_RECORD, &CLidareRecorderDlg::OnBnClickedButtonStopRecord)
+	ON_WM_CLOSE()
 END_MESSAGE_MAP()
 
 
@@ -160,11 +164,34 @@ HCURSOR CLidareRecorderDlg::OnQueryDragIcon()
 
 void CLidareRecorderDlg::OnBnClickedButtonStartRecord()
 {
-	// TODO: Add your control notification handler code here
+	
+	if (!m_isRecording)
+	{
+		m_isRecording = true;
+		ShellExecute(GetSafeHwnd(), "open", "Record.exe", NULL, NULL, SW_HIDE);
+		m_btnStartRecord.EnableWindow(false);
+		m_btnStopRecord.EnableWindow(true);
+	}
 }
 
 
 void CLidareRecorderDlg::OnBnClickedButtonStopRecord()
 {
-	// TODO: Add your control notification handler code here
+	if (m_isRecording)
+	{
+		//CWnd* hWin = FindWindow(NULL, "Record.exe");
+		system("TASKKILL /F /IM Record.exe 2>NULL");
+		m_isRecording = false;
+		m_btnStartRecord.EnableWindow(true);
+		m_btnStopRecord.EnableWindow(false);
+
+	}
+}
+
+
+void CLidareRecorderDlg::OnClose()
+{
+	// TODO: Add your message handler code here and/or call default
+	system("TASKKILL /F /IM Record.exe 2>NULL");
+	CDialogEx::OnClose();
 }
